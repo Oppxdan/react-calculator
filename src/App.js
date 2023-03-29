@@ -10,6 +10,22 @@ function App() {
     setResult(newResult);
   }
 
+  const calculate = () => {
+    const calculation = String(eval(result));
+
+    setResult(calculation);
+  }
+
+  const clear = () => {
+    setResult("");
+  }
+
+  const backspace = () => {
+    const backspacedResult = result.substring(0, result.length-1);
+
+    setResult(backspacedResult);
+  }
+
   return (
     <div className="App">
       <div>
@@ -30,10 +46,10 @@ function App() {
         <button className="calc-btn" onClick={() => addNumber("-")}>-</button> 
         <button className="calc-btn" onClick={() => addNumber("0")}>0</button> 
         <button className="calc-btn" onClick={() => addNumber(".")}>.</button> 
-        <button className="calc-btn" >=</button> 
+        <button className="calc-btn" onClick={calculate}>=</button> 
         <button className="calc-btn" onClick={() => addNumber("+")}>+</button> 
-        <button className="calc-btn">⌫</button>
-        <button className="calc-btn">C</button>  
+        <button className="calc-btn" onClick={backspace}>⌫</button>
+        <button className="calc-btn" onClick={clear}>C</button>  
       </section>
     </div>
   );
