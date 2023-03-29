@@ -4,7 +4,19 @@
     color: whitesmoke;
     border-radius: 20px;
     overflow: hidden;
+    animation: 1s ease-out 0s 1 slideInLeft;
 }
+
+@keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 
 .calc-grid {
     display: grid;
@@ -42,4 +54,20 @@
 
 .operand {
     color: rgb(6, 204, 6);
+}
+
+@media (min-width: 500px) {
+    .calculator {
+        width: 40%;
+    }
+}
+
+@media (min-width: 900px) {
+    .calculator {
+        width: 33%;
+        
+    }
+    .calc-btn {
+        padding: 30px;
+    }
 }
