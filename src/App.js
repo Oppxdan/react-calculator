@@ -1,23 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const [result, setResult] = useState("");
+
+  const addNumber = (value) => {
+    const newResult = String(result.concat(value));
+
+    setResult(newResult);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        {result}
+      </div>
+      <section className="calc-grid">
+        <button className="calc-btn" onClick={() => addNumber("7")}>7</button>
+        <button className="calc-btn" onClick={() => addNumber("8")}>8</button>
+        <button className="calc-btn" onClick={() => addNumber("9")}>9</button>
+        <button className="calc-btn" onClick={() => addNumber("/")}>/</button> 
+        <button className="calc-btn" onClick={() => addNumber("4")}>4</button> 
+        <button className="calc-btn" onClick={() => addNumber("5")}>5</button> 
+        <button className="calc-btn" onClick={() => addNumber("6")}>6</button> 
+        <button className="calc-btn" onClick={() => addNumber("*")}>X</button> 
+        <button className="calc-btn" onClick={() => addNumber("1")}>1</button> 
+        <button className="calc-btn" onClick={() => addNumber("2")}>2</button> 
+        <button className="calc-btn" onClick={() => addNumber("3")}>3</button> 
+        <button className="calc-btn" onClick={() => addNumber("-")}>-</button> 
+        <button className="calc-btn" onClick={() => addNumber("0")}>0</button> 
+        <button className="calc-btn" onClick={() => addNumber(".")}>.</button> 
+        <button className="calc-btn" >=</button> 
+        <button className="calc-btn" onClick={() => addNumber("+")}>+</button> 
+        <button className="calc-btn">⌫</button>
+        <button className="calc-btn">C</button>  
+      </section>
     </div>
   );
 }
