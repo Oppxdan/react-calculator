@@ -1,0 +1,45 @@
+.calculator {
+    width: 70%;
+    background-color: rgb(20, 20, 20);
+    color: whitesmoke;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.calc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: rgb(41, 41, 41);
+  }
+
+.output {
+    height: 70px;
+}
+
+.calc-btn {
+    border-color:rgb(41, 41, 41);
+    border-width: 1px;
+    color: whitesmoke;
+    background-color: inherit;
+    padding: 15px;
+    transition: all .2s ease-in-out;
+}
+
+.calc-btn:hover {
+    transform: scale(1.1);
+    background-color: white;
+    color: black;
+    border: none;
+}
+
+.red-btn {
+    color:rgb(165, 7, 7);
+}
+
+.red-btn:hover {
+    color:rgb(165, 7, 7);
+}
+
+.operand {
+    color: rgb(6, 204, 6);
+}
