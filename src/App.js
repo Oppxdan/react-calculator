@@ -10,6 +10,13 @@ function App() {
     setResult(newResult);
   }
 
+  const addDot = (value) => {
+    if (result.includes(".") == false) {
+      const newResult = String(result.concat(value));
+      setResult(newResult);
+    }
+  }
+
   const calculate = () => {
     const calculation = String(eval(result));
 
@@ -45,7 +52,7 @@ function App() {
         <button className="calc-btn" onClick={() => addNumber("3")}>3</button> 
         <button className="calc-btn" onClick={() => addNumber("-")}>-</button> 
         <button className="calc-btn" onClick={() => addNumber("0")}>0</button> 
-        <button className="calc-btn" onClick={() => addNumber(".")}>.</button> 
+        <button className="calc-btn" onClick={() => addDot(".")}>.</button> 
         <button className="calc-btn" onClick={calculate}>=</button> 
         <button className="calc-btn" onClick={() => addNumber("+")}>+</button> 
         <button className="calc-btn" onClick={backspace}>⌫</button>
