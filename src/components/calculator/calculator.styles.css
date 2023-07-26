@@ -56,9 +56,11 @@
     color: rgb(6, 204, 6);
 }
 
-@media (min-width: 500px) {
-    .calculator {
-        width: 40%;
+/*  Min Widths */
+
+@media (min-width: 1300px) {
+    .calc-btn {
+        height: 5vw;
     }
 }
 
@@ -69,5 +71,19 @@
     }
     .calc-btn {
         padding: 30px;
+    }
+}
+
+@media (min-width: 500px) {
+    .calculator {
+        width: 40%;
+    }
+}
+
+/* Max Widths */
+
+@media (max-width: 500px) {
+    .calc-btn {
+        height: 12vw;
     }
 }
